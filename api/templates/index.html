@@ -4,16 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
   <link rel="icon" href="../../favicon.png">
   <title>Home</title>
-  <style>
-    html {
-      height: 100;
-      margin: 0;
-    }
-  </style>
 </head>
 
 <body>
@@ -21,24 +16,37 @@
     <div class="container"> <a class="navbar-brand text-primary" href="#">
         <i class="fa d-inline fa-lg fa-stop-circle"></i>
         <b> BRAND</b>
-      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
+      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+        data-target="#navbar4">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar4">
         <ul class="navbar-nav ml-auto">
+          {% if session.username %}
+          <li class="nav-item"><a class="nav-link" href="/workbook"><i class="fa fa-fw fa-book"></i>Workbook</a></li>
+          {% endif %}
           <li class="nav-item"> <a class="nav-link" href="/"><i class="fa fa-fw fa-home"></i>Home</a> </li>
           <li class="nav-item"> <a class="nav-link" href="/pricing"><i class="fa fa-fw fa-tags"></i>Pricing</a> </li>
           <li class="nav-item"> <a class="nav-link" href="/about"><i class="fa fa-fw fa-info-circle"></i>About</a> </li>
+          <li class="nav-item"><a class="nav-link" href="/login"><i class="fa fa-fw fa-sign-in"></i>Login</a></li> {% if
+          session.username %} <li class="nav-item text-danger">
+            <a class="nav-link text-danger" href="/logout">
+              <i class="fa fa-fw fa-sign-out text-danger"></i>Logout<br>
+            </a>
+          </li> {% endif %}
         </ul> <a class="btn navbar-btn ml-md-2 btn-light btn-lg" href="https://wa.me/+40725497848">Contact me</a>
       </div>
     </div>
   </nav>
-  <div class="text-center text-white h-100 align-items-center d-flex" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+  <div class="text-center text-white h-100 align-items-center d-flex"
+    style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
     <div class="container py-5">
       <div class="row">
         <div class="mx-auto col-lg-8 col-md-10">
           <h1 class="display-3 mb-4" style="">Python course</h1>
-          <p class="lead mb-5">From no programming experience to build and host your own website for <span class="text-success">FREE</span>, I am here to assist in your journey of learning Python programming language</p>
+          <p class="lead mb-5">From no programming experience to build and host your own website for <span
+              class="text-success">FREE</span>, I am here to assist in your journey of learning Python programming
+            language</p>
         </div>
       </div>
     </div>
@@ -53,20 +61,24 @@
       <div class="row">
         <div class="col-lg-4 col-md-4 p-4">
           <h4> <b><i>Beginner Course</i></b></h4>
-          <p>You will learn to use Python programming language from scratch. This will help you think like a programmer and make basic script for automating boring stuff.</p>
+          <p>You will learn to use Python programming language from scratch. This will help you think like a programmer
+            and make basic script for automating boring stuff.</p>
         </div>
         <div class="col-lg-4 col-md-4 p-4">
           <h4> <b><i>Intermmediate Course</i></b></h4>
-          <p>We will dive into some more advance Python concepts like Object Programming Language(OOP) or file handling along with some cool applications.</p>
+          <p>We will dive into some more advance Python concepts like Object Programming Language(OOP) or file handling
+            along with some cool applications.</p>
         </div>
         <div class="col-lg-4 col-md-4 p-4">
           <h4> <b><i>Advanced Course</i></b></h4>
-          <p>This course is focused on web developing, from building a website, host it over the internet, create APIs and web scrapers.</p>
+          <p>This course is focused on web developing, from building a website, host it over the internet, create APIs
+            and web scrapers.</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="py-5 text-white" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+  <div class="py-5 text-white"
+    style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
@@ -133,7 +145,8 @@
       <div class="row">
         <div class="mx-auto col-lg-10">
           <h1>Key points of this course</h1>
-          <p class="mb-3 mx-auto w-75 lead">This course will take place online, under a fully integrated developement environment application and save your progress on Cloud</p>
+          <p class="mb-3 mx-auto w-75 lead">This course will take place online, under a fully integrated developement
+            environment application and save your progress on Cloud</p>
           <div class="row">
             <div class="col-md-4 mt-4 px-4 col-6"> <i class="d-block fa fa-4x mb-3 text-muted fa-video-camera"></i>
               <h5> <b>One-to-one meeting</b></h5>
@@ -161,9 +174,19 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" style=""></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
+    style=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <pingendo onclick="window.open('https://pingendo.com/', '_blank')"
+    style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">
+    Made with Pingendo Free&nbsp;&nbsp;<img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block"
+      alt="Pingendo logo" height="16"></pingendo>
 </body>
 
 </html>
