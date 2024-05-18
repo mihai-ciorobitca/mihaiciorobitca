@@ -2,7 +2,7 @@
 
 REM Remove Pingendo code from HTML files using PowerShell
 for /r %%f in (*.html) do (
-    powershell -Command "(Get-Content '%%f' -Raw) -replace '<pingendo.*?>', '' | Set-Content '%%f'"
+    powershell -Command "(Get-Content '%%f' -Raw) -replace '<pingendo.*?</pingendo>', '' | Set-Content '%%f'"
 )
 
 REM Add the changes to the staging area
