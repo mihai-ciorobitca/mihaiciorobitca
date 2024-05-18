@@ -13,3 +13,7 @@ def pricing():
 @app.route("/about")
 def about():
     return render_template("about.html")
+
+@app.route("/workbook")
+def workbook():
+    return render_template("workboook.html")
