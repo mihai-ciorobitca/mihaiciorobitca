@@ -12,4 +12,4 @@ REM Commit the changes with a message
 git commit -m "Removed Pingendo code"
 
 REM Push the committed changes to the remote repository
-git push origin master
+git push origin master --force
