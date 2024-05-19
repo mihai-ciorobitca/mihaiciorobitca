@@ -2,11 +2,16 @@ from flask import Flask, render_template, redirect, request, session
 
 app = Flask(__name__)
 app.secret_key = "secret"
+app.config["MAINTENANCE"] = False
 
+@app.before_request
+def maintenance():
+    if app.config["MAINTENANCE"]:
+        return render_template("maintenance.html")
+ 
 @app.route("/")
 def index():
-    return render_template("maintenance.html")
-    # return render_template("index.html")
+    return render_template("index.html")
 
 @app.route("/pricing")
 def pricing():
