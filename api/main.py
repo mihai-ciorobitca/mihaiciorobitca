@@ -5,7 +5,8 @@ app.secret_key = "secret"
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("maintenance.html")
+    # return render_template("index.html")
 
 @app.route("/pricing")
 def pricing():
@@ -30,3 +31,11 @@ def workbook():
     if session.get("username", False):
         return render_template("workbook.html")
     return redirect("/")
+
+@app.errorhandler(404)
+def page404(error):
+    return render_template("page404.html")
+
+@app.errorhandler(500)
+def page500(error):
+    return render_template("page500.html")
