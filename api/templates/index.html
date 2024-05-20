@@ -4,39 +4,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    type="text/css">
   <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
   <link rel="icon" href="../../favicon.png">
   <title>Home</title>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container"> <a class="navbar-brand text-primary" href="#">
-        <i class="fa d-inline fa-lg fa-stop-circle"></i>
+        <i class="fa d-inline fa-lg fa-circle-o"></i>
         <b> Python with Mihai</b>
-      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar4">
+      </a> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse"
+        data-target="#navbar5">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbar4">
-        <ul class="navbar-nav ml-auto"> {% if session.username %} <li class="nav-item"><a class="nav-link" href="/workbook"><i class="fa fa-fw fa-book"></i>Workbook</a></li> {% endif %} <li class="nav-item"> <a class="nav-link" href="/"><i class="fa fa-fw fa-home"></i>Home</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="/pricing"><i class="fa fa-fw fa-tags"></i>Pricing</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="/about"><i class="fa fa-fw fa-info-circle"></i>About</a> </li>
-          <li class="nav-item"><a class="nav-link" href="/login"><i class="fa fa-fw fa-sign-in"></i>Login</a></li> {% if session.username %} <li class="nav-item text-danger">
-            <a class="nav-link text-danger" href="/logout">
-              <i class="fa fa-fw fa-sign-out text-danger"></i>Logout<br>
-            </a>
-          </li> {% endif %}
-        </ul> <a class="btn navbar-btn ml-md-2 btn-light btn-lg" href="https://wa.me/+40725497848">Contact me</a>
+      <div class="collapse navbar-collapse" id="navbar5">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"> <a class="nav-link" href="#"><i class="fa fa-fw fa-home"></i>Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#"><i class="fa fa-fw fa-tags"></i>Pricing</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#"><i class="fa fa-fw fa-info-circle"></i>About</a> </li>
+        </ul> {% if session.username %} <ul class="navbar-nav ml-auto">
+          <li class="nav-item"> <a class="nav-link" href="/workbook"><i class="fa fa-fw fa-book"></i>Workbook</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="/login"><i class="fa fa-fw fa-sign-out"></i>Logout</a> </li>
+          <li class="nav-item text-danger"> <a class="nav-link text-danger" href="/logout"><i
+                class="fa fa-fw fa-sign-out"></i>Logout</a> </li>
+        </ul> {% endif %}
       </div>
     </div>
   </nav>
-  <div class="text-center text-white h-100 align-items-center d-flex" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+  <div class="modal" id="contactModal">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLabel"><b>Contact me</b></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p class="lead">You can contact me via Whatsapp, phone or email address</p>
+        </div>
+        <div class="modal-footer d-flex justify-content-around">
+          <a class="btn btn-primary" href="#"><i class="fa fa-fw fa-whatsapp"></i>&nbsp;Whatsapp</a>
+          <a class="btn btn-danger" href="#"><i class="fa fa-fw fa-phone"></i>&nbsp;Call me</a>
+          <a class="btn btn-secondary" href="#"><i class="fa fa-fw fa-envelope"></i>&nbsp;Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center text-white h-100 align-items-center d-flex"
+    style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
     <div class="container py-5">
       <div class="row">
         <div class="mx-auto col-lg-8 col-md-10">
-          <h1 class="display-3 mb-4" style="">Python course</h1>
-          <p class="lead mb-5">From no programming experience to build and host your own website for <span class="text-success">FREE</span>, I am here to assist in your journey of learning Python programming language</p>
+          <h1 class="display-3 mb-4" style=""><b>Python course</b></h1>
+          <p class="lead mb-5">From no programming experience to build and host your own website for <span
+              class="text-success">FREE</span>, I am here to assist in your journey of learning Python programming
+            language</p>
         </div>
       </div>
     </div>
@@ -51,20 +77,24 @@
       <div class="row">
         <div class="col-lg-4 col-md-4 p-4">
           <h4> <b><i>Beginner Course</i></b></h4>
-          <p>You will learn to use Python programming language from scratch. This will help you think like a programmer and make basic script for automating boring stuff.</p>
+          <p>You will learn to use Python programming language from scratch. This will help you think like a programmer
+            and make basic script for automating boring stuff.</p>
         </div>
         <div class="col-lg-4 col-md-4 p-4">
           <h4> <b><i>Intermmediate Course</i></b></h4>
-          <p>We will dive into some more advance Python concepts like Object Programming Language(OOP) or file handling along with some cool applications.</p>
+          <p>We will dive into some more advance Python concepts like Object Programming Language(OOP) or file handling
+            along with some cool applications.</p>
         </div>
         <div class="col-lg-4 col-md-4 p-4">
           <h4> <b><i>Advanced Course</i></b></h4>
-          <p>This course is focused on web developing, from building a website, host it over the internet, create APIs and web scrapers.</p>
+          <p>This course is focused on web developing, from building a website, host it over the internet, create APIs
+            and web scrapers.</p>
         </div>
       </div>
     </div>
   </div>
-  <div class="py-5 text-white" style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
+  <div class="py-5 text-white"
+    style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, .75)), url(https://static.pingendo.com/cover-bubble-dark.svg);  background-position: center center, center center;  background-size: cover, cover;  background-repeat: repeat, repeat;">
     <div class="container">
       <div class="row">
         <div class="col-md-12 text-center">
@@ -85,7 +115,7 @@
                 <li class="text-left">Working with modules</li>
                 <li class="text-left">Reading and writing files</li>
                 <li class="text-left">Debugging</li>
-              </ul> <a class="btn btn-link" href="#">Apply</a>
+              </ul> <a class="btn btn-link" href="https://wa.me/+40725497858">Apply</a>
             </div>
           </div>
         </div>
@@ -126,24 +156,25 @@
       </div>
     </div>
   </div>
-  <div class="py-5 text-center">
+  <div class="py-5 text-center" style="">
     <div class="container">
       <div class="row">
         <div class="mx-auto col-lg-10">
           <h1>Key points of this course</h1>
-          <p class="mb-3 mx-auto w-75 lead">This course will take place online, under a fully integrated developement environment application and save your progress on Cloud</p>
+          <p class="mb-3 mx-auto w-75 lead">This course will take place online, under a fully integrated developement
+            environment application and save your progress on Cloud</p>
           <div class="row">
             <div class="col-md-4 mt-4 px-4 col-6"> <i class="d-block fa fa-4x mb-3 text-muted fa-video-camera"></i>
               <h5> <b>One-to-one meeting</b></h5>
-              <p class="mb-3">We'll be using Google Meet</p>
+              <p class="mb-3">We'll be meeting though Google Meet platform</p>
             </div>
             <div class="col-md-4 mt-4 px-4 col-6"> <i class="d-block fa fa-4x mb-3 text-muted fa-code"></i>
               <h5> <b>Modern developemnet tool</b></h5>
-              <p class="mb-3">We will work with Visual Studio Code</p>
+              <p class="mb-3">We will write code using Visual Studio Code editor</p>
             </div>
-            <div class="col-md-4 mt-4 px-4 col-6"> <i class="d-block fa fa-4x mb-3 text-muted fa-github"></i>
+            <div class="col-md-4 mt-4 px-4 col-6"> <i class="fa mb-3 fa-github fa-4x"></i>
               <h5> <b>Building your portofolio</b></h5>
-              <p class="mb-3" contenteditable="true">Your projects will be deployed on Github</p>
+              <p class="mb-3">Your projects will be deployed on Github platform</p>
             </div>
           </div>
         </div>
@@ -159,14 +190,22 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" style=""></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"
+    style=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <a id="openModalButton" class="btn btn-primary navbar-btn ml-md-2"
+    style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;">Contact me</a>
+  <script>
+    document.getElementById('openModalButton').addEventListener('click', function () {
+      $('#contactModal').modal('show');
+    });
+  </script>
 </body>
 
 </html>
-
-
-
-
-
