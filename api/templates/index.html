@@ -5,34 +5,43 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-  <link rel="icon" href="../../favicon.png">
-  <title>Home</title>
+  <link rel="icon" href="../static/assets/logo.png">
+  <title>Python with Mihai - Learn Python Programming and Web Development</title>
   <meta name="trustpilot-one-time-domain-verification-id" content="59abd561-ab43-4ea0-ab58-d3fa0aad2637">
   <link rel="stylesheet" href="{{ url_for('static', filename='/css/bootstrap-4.3.1.css') }}">
   <link rel="stylesheet" href="../static/css/bootstrap-4.3.1.css">
   <style> body {
       font-family: 'Montserrat', sans-serif;
     }
+
+    .navbar-light .navbar-toggler {
+      border: 1px solid #ffc107;
+    }
+
+    .custom-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='%23ffc107' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
   </style>
+  <meta name="description" content="Join Mihai, an experienced Python developer, to learn Python programming and web development. Our courses cover everything from basic Python concepts to advanced topics like web scraping, API creation, and deploying websites at no cost. Start building your own website with comprehensive guidance and support.">
+  <meta name="keywords" content="Python programming, learn Python, Python courses, web development, build websites, web scraping, API creation, Flask, FastAPI, hosting websites, beginner Python, advanced Python, programming courses, Mihai, Python developer, online Python courses, coding classes, Google Meet classes, Visual Studio Code, GitHub portfolio, coding projects">
 </head>
 
 <body style="	background-image: linear-gradient(to bottom, rgba(0,0,0,0.75), rgba(0,0,0,0.75));	background-position: top left;	background-size: 100%;	background-repeat: repeat;" class="text-white">
   <nav class="navbar navbar-expand-md navbar-light my-3">
     <div class="container"> <a class="navbar-brand text-primary" href="#">
         <b class="text-warning"><b> Python with Mihai</b></b>
-        <img src="../static/assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""></a> <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar4">
+        <img src="../static/assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""></a> <button class="navbar-toggler navbar-toggler-right custom-toggler" type="button" data-toggle="collapse" data-target="#navbar4">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar4">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item"> <a class="nav-link text-white" href="#courses"><b>Courses</b></a> </li>
+        <ul class="navbar-nav ml-auto"> {% if session.username %} <li class="nav-item"> <a class="nav-link text-white" href="/workbook"><b>Workbook</b></a> </li> {% endif %} {% if session.admin %} <li class="nav-item"> <a class="nav-link text-white" href="/admin"><b>Admin</b></a> </li> {% endif %} <li class="nav-item"> <a class="nav-link text-white" href="#courses"><b>Courses</b></a> </li>
           <li class="nav-item text-white"> <a class="nav-link text-white" href="#pricing">Pricing</a> </li>
-          <li class="nav-item text-white"> <a class="nav-link text-white" href="#about">About</a> </li>
+          <li class="nav-item text-white"> <a class="nav-link text-warning" href="/login"><b>Login</b></a> </li>
         </ul>
       </div>
     </div>
   </nav>
-  <div class="modal" id="contactModal" style="">
+  <div class="modal" id="contactModal">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header text-warning bg-primary">

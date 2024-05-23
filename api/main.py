@@ -6,7 +6,7 @@ app.config["MAINTENANCE"] = False
 
 @app.before_request
 def maintenance():
-    if app.config["MAINTENANCE"]:
+    if app.config["MAINTENANCE"] and request.path == "/":
         return render_template("maintenance.html")
  
 @app.route("/")
@@ -21,12 +21,28 @@ def login():
         if (email, password) == ("mihai@gmail.com", "Password"):
             session["username"] = "Mihai"
             return redirect("/")
+        elif (email, password) == ("admin@gmail.com", "Admin"):
+            session["admin"] = "admin"
+            return redirect("/")
     return render_template("login.html")
 
 @app.route("/workbook")
 def workbook():
     if session.get("username", False):
         return render_template("workbook.html")
+    return redirect("/")
+
+@app.route("/admin")
+def admin():
+    if session.get("admin", False):
+        return render_template("admin.html", maintenance_status=app.config["MAINTENANCE"])
+    return redirect("/")
+
+@app.route("/admin/change-maintenance")
+def admin_maintenance():
+    if session.get("admin", False):
+        app.config["MAINTENANCE"] = True if not app.config["MAINTENANCE"] else False
+        return redirect("/admin")
     return redirect("/")
 
 @app.errorhandler(404)
