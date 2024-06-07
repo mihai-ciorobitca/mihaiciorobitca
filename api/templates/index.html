@@ -25,6 +25,17 @@
     body, body *:not(.fa):not(.fas):not(.far):not(.fal):not(.fab) {
             font-family: monospace !important;
         }
+    
+    #pricing .col-lg-4 {
+      display: flex;
+    }
+
+    #pricing .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
   </style>
   <meta name="description" content="Join Mihai, an experienced Python developer, to learn Python programming and web development. Our courses cover everything from basic Python concepts to advanced topics like web scraping, API creation, and deploying websites at no cost. Start building your own website with comprehensive guidance and support.">
   <meta name="keywords" content="Python programming, learn Python, Python courses, web development, build websites, web scraping, API creation, Flask, FastAPI, hosting websites, beginner Python, advanced Python, programming courses, Mihai, Python developer, online Python courses, coding classes, Google Meet classes, Visual Studio Code, GitHub portfolio, coding projects">
@@ -46,7 +57,7 @@
       </div>
     </div>
   </nav>
-  <div class="modal" id="contactModal">
+  <div class="modal p-2" id="contactModal" style="">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header text-warning bg-primary">
@@ -59,25 +70,25 @@
           <p class="lead my-2 text-white"><b>I am available to answer on Whatsapp, Phone or Email</b></p>
         </div>
         <div class="modal-footer d-flex justify-content-around bg-primary">
-          <a class="btn btn-warning text-dark" href="https://wa.me/+40725497858"><i class="fa fa-fw fa-whatsapp"></i><b><b>&nbsp;Whatsapp</b></b></a>
-          <a class="btn text-dark btn-warning" href="tel:+40725497858" style=""><i class="fa fa-fw fa-phone"></i><b><b>&nbsp;Call me</b></b></a>
-          <a class="btn text-dark btn-warning" href="mailto:mihai.ciorobitca@student.tuiasi.ro"><i class="fa fa-fw fa-envelope"></i><b><b>&nbsp;Email</b></b></a>
+          <a class="btn btn-warning text-dark" href="https://wa.me/+40725497858" style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><i class="fa fa-fw fa-whatsapp"></i><b><b>&nbsp;Whatsapp</b></b></a>
+          <a class="btn text-dark btn-warning" href="tel:+40725497858" style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><i class="fa fa-fw fa-phone"></i><b><b>&nbsp;Call</b></b></a>
+          <a class="btn text-dark btn-warning" href="mailto:mihai.ciorobitca@student.tuiasi.ro" style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><i class="fa fa-fw fa-envelope"></i><b><b>&nbsp;Email</b></b></a>
         </div>
       </div>
     </div>
   </div>
-  <div class="text-center text-white h-100 align-items-center d-flex m-5" style="">
-    <div class="container">
+  <div class="text-center text-white h-100 align-items-center d-flex py-3" style="">
+    <div class="container mx-3">
       <div class="row" style="">
-        <div class="col-lg-8 col-md-6 mr-auto" style="	max-width: 500px;">
-          <h2 class="text-left text-warning my-4" style=""><b>Build your website<br>with Python</b></h2>
-          <p class="lead text-left my-2" style="	max-width: 500px;">My name is Mihai, I am Python developer and I want to teach you how to think like a programmer. With me you can learn Python developing and finally to build your own website with NO additional cost.<br><br></p>
+        <div class="col-lg-8 col-md-6" style="">
+          <h2 class="text-left text-warning mb-4" style=""><b>Build your website<br>with Python</b></h2>
+          <p class="lead text-left my-2" style="	max-width: 500px;">My name is Mihai, I am Python developer and I want to teach you how to think like a programmer.<br><br>With me you can learn Python developing and finally to build your own website with NO additional cost.<br><br></p>
         </div>
-        <div class="col-md-6"><img class="img-fluid d-block" src="../static/assets/roadmap.png"></div>
+        <div class="col-md-6 col-lg-4 mx-auto" style=""><img class="d-block img-fluid" src="../static/assets/roadmap.png" style=""></div>
       </div>
     </div>
   </div>
-  <div class="py-5" id="about">
+  <div class="py-3" id="about" style="">
     <div class="container">
       <div class="row">
         <div class="text-center col-md-12">
@@ -86,11 +97,11 @@
       </div>
       <div class="row">
         <div class="col-lg-6 col-md-6 p-3" style="">
-          <div class="card bg-light">
-            <div class="card-body p-4 bg-danger border-danger">
+          <div class="card bg-light border-0" style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+            <div class="card-body p-4 bg-danger border-danger" style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
               <div class="row">
                 <div class="col-8 col-md-12">
-                  <h2 class="mb-0 text-white"><b>Myths</b></h2>
+                  <h2 class="mb-0 text-warning" style=""><b>Myths</b></h2>
                 </div>
               </div>
               <p class="lead my-3" contenteditable="true"><b>Expensive to host</b></p>
@@ -100,11 +111,11 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-6 p-3" style="">
-          <div class="card bg-light">
-            <div class="card-body p-4 bg-primary">
+          <div class="card bg-light border-0" style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
+            <div class="card-body p-4 bg-primary" style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
               <div class="row">
                 <div class="col-8 col-md-12">
-                  <h2 class="mb-0 text-white"><b>Truths</b></h2>
+                  <h2 class="mb-0 text-warning"><b>Truths</b></h2>
                 </div>
               </div>
               <p class="lead my-3"><b>Hosting is FREE</b></p>
@@ -116,55 +127,54 @@
       </div>
     </div>
   </div>
-  <div class="py-5" id="courses">
+  <div class="py-3" id="courses" style="">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="d-flex flex-column col-lg-12 justify-content-start my-2 text-center" style="">
+      <div class="row d-flex flex-row" style="">
+        <div class="col-md-4 px-4 mx-auto" style="	max-width: 500px;	min-width: 300px;">
+          <div class="d-flex flex-column col-lg-12 text-center my-2 justify-content-start" style="">
             <h2 class="text-warning my-4 text-left"><b>Starter</b></h2>
-            <p class="lead text-left">Learn basics of Python</p>
-            <p class="lead text-left">Debugging projects</p>
+            <p class="lead text-left">Basic of Python</p>
+            <p class="lead text-left">Debugging code</p>
             <p class="lead text-left" style="">Deploy on cloud</p>
-            <p class="lead text-left">Start thinking like a developer</p>
+            <p class="lead text-left">Think as a dev</p>
           </div>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 px-3 mx-auto" style="	max-width: 500px;	min-width: 300px;">
           <div class="d-flex flex-column col-lg-12 justify-content-start text-center my-2">
             <h2 class="text-warning my-4 text-left"><b>Advanced</b></h2>
-            <p class="lead text-left">Enhance Python knowledge</p>
+            <p class="lead text-left">Complex Python</p>
             <p class="lead text-left" style="">Learn to plot data</p>
             <p class="lead text-left">Send emails</p>
-            <p class="lead text-left" style="">Create telegram bots</p>
+            <p class="lead text-left" style="">Telegram bots</p>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="d-flex flex-column col-lg-12 justify-content-start text-center my-2">
-            <h2 contenteditable="true" class="text-warning my-4 text-left"><b>Web with Python</b></h2>
-            <p class="lead text-left">Host the website at NO cost&nbsp;</p>
-            <p class="lead text-left" style="">Learn web scraping</p>
-            <p class="lead text-left">Create APIs for your websites</p>
-            <p class="lead text-left" style="">Use Google protection tools</p>
+        <div class="col-md-4 px-3 mx-auto" style="	max-width: 500px;	min-width: 300px;">
+          <div class="d-flex flex-column col-lg-12 justify-content-start text-center my-2" style="">
+            <h2 class="text-warning my-4 text-left"><b>Web Python</b></h2>
+            <p class="lead text-left">Website hosting</p>
+            <p class="lead text-left" style="">Web scraping</p>
+            <p class="lead text-left">Website APIs</p>
+            <p class="lead text-left" style="">Google protection&nbsp;</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="py-5" style="	background-attachment: fixed;	transform:  translateX(8px)  translateY(90px) ;" id="pricing">
+  <div class="py-3" id="pricing">
     <div class="container">
       <div class="row">
-        <div class="text-center mx-auto col-md-12 text-warning">
+        <div class="text-center mx-auto col-md-12 text-warning" style="">
           <h2 class="text-warning my-4"><b>Pricing</b></h2>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 p-3">
-          <div class="card text-center bg-primary">
+        <div class="col-lg-4 p-3" style="">
+          <div class="card text-center bg-primary mx-auto" style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
             <div class="card-header p-3">
               <h4 class="text-left my-2 text-white"><i class="fa fa-fw fa-graduation-cap"></i><b>&nbsp;Starter</b>
               </h4>
               <div class="d-flex align-items-center">
-                <h4 class="text-white text-center mx-1 mt-2 mb-0"><del class="text-muted text-center">$159</del></h4>
-                <h1 class="text-left text-white mb-0"><b class="">$99</b></h1>
+                <h1 class="text-left text-white mb-0"><b class="">$10/h</b></h1>
               </div>
             </div>
             <div class="card-body p-3">
@@ -176,18 +186,17 @@
                 <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>Iterator objects</b></li>
                 <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>Working with modules</b></li>
                 <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>Reading and writing files</b></li>
-              </ul> <a class="btn btn-warning btn-block text-white" href="https://t.me/+Q24h4_xeVTU2ZmU0"><b class="text-dark"><b>Join</b></b></a>
+              </ul> <a class="btn btn-warning btn-block text-white" href="https://t.me/+Q24h4_xeVTU2ZmU0" style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b class="text-dark"><b>Join</b></b></a>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 p-3">
-          <div class="card text-center bg-primary">
+        <div class="col-lg-4 p-3" style="">
+          <div class="card text-center bg-primary mx-auto" style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
             <div class="card-header p-3">
               <h4 class="text-left mr-3 mb-0 my-2 text-white"><i class="fa fa-fw fa-gears"></i><b>&nbsp;Advanced</b>
               </h4>
               <div class="d-flex align-items-center">
-                <h4 class="text-white text-center mx-1 mt-2 mb-0"><del class="text-muted text-center">$189</del></h4>
-                <h1 class="text-left text-white mb-0"><b class="">$120</b></h1>
+                <h1 class="text-left text-white mb-0"><b class="">$12/h</b></h1>
               </div>
             </div>
             <div class="card-body p-3">
@@ -199,17 +208,16 @@
                 <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>Sending emails</b></li>
                 <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>Regular expressions</b></li>
                 <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>Telegram bots</b></li>
-              </ul> <a class="btn btn-warning btn-block text-white" href="https://t.me/+Q24h4_xeVTU2ZmU0"><b><b class="text-dark">Join</b></b></a>
+              </ul> <a class="btn btn-warning btn-block text-white" href="https://t.me/+wWL3v77woOdmMWU8" style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b><b class="text-dark">Join</b></b></a>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 p-3">
-          <div class="card text-center bg-primary">
+        <div class="col-lg-4 p-3" style="">
+          <div class="card text-center bg-primary mx-auto" style="	border-top-left-radius: 20px;	border-top-right-radius: 20px;	border-bottom-left-radius: 20px;	border-bottom-right-radius: 20px;">
             <div class="card-header p-3">
-              <h4 class="text-left mr-3 mb-0 my-2 text-white"><i class="fa fa-fw fa-desktop"></i><b>&nbsp;Web developer</b></h4>
+              <h4 class="text-left mr-3 mb-0 my-2 text-white" contenteditable="true"><i class="fa fa-fw fa-desktop"></i><b>&nbsp;Web dev</b></h4>
               <div class="d-flex align-items-center">
-                <h4 class="text-white text-center mx-1 mt-2 mb-0"><del class="text-muted text-center">$199</del></h4>
-                <h1 class="text-left text-white mb-0"><b class="">$140</b></h1>
+                <h1 class="text-left text-white mb-0"><b class="">$14/h</b></h1>
               </div>
             </div>
             <div class="card-body p-3">
@@ -221,30 +229,30 @@
                 <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>Create webscraper</b></li>
                 <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>Add reCaptcha protection</b></li>
                 <li class="lead my-2"><i class="fa fa-fw fa-check"></i><b>Use Google authentication</b></li>
-              </ul> <a class="btn btn-warning btn-block text-white" href="https://t.me/+Q24h4_xeVTU2ZmU0"><b><b class="text-dark">Join</b></b></a>
+              </ul> <a class="btn btn-warning btn-block text-white" href="https://t.me/+UwiKhD89heIxMjE0" style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b><b class="text-dark">Join</b></b></a>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="text-center py-5" style="">
+  <div class="text-center py-3" style="" id="tools">
     <div class="container">
       <div class="row">
-        <div class="mx-auto col-lg-10">
+        <div class="col-lg-10 mx-auto" style="">
           <h2 class="text-warning my-4"><b>Tools</b></h2>
           <div class="row">
             <div class="col-md-4 col-6 p-2"> <i class="d-block fa fa-4x mb-3 fa-video-camera text-white"></i>
               <h5> <b>One-to-one meeting</b></h5>
-              <p class="m-3">Classes will take place on Google Meet platform</p><a class="btn btn-warning btn-block text-white" href="https://meet.google.com/"><b class="text-dark"><b>Visit website</b></b></a>
+              <p class="m-3">Classes will take place on Google Meet platform</p><a class="btn btn-warning btn-block text-white" href="https://meet.google.com/" style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b class="text-dark"><b>Visit website</b></b></a>
             </div>
             <div class="col-md-4 col-6 p-2" style=""> <i class="d-block fa fa-4x mb-3 fa-code text-white"></i>
               <h5><b>Easy development</b></h5>
-              <p class="my-3">Developing using Visual Studio Code editor</p><a class="btn btn-warning btn-block text-white" href="https://code.visualstudio.com/download"><b class="text-dark"><b>Download</b></b></a>
+              <p class="my-3">Developing using Visual Studio Code editor</p><a class="btn btn-warning btn-block text-white" href="https://code.visualstudio.com/download" style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b class="text-dark"><b>Download</b></b></a>
             </div>
             <div class="col-md-4 col-6 p-2"> <i class="fa mb-3 fa-4x fa-github text-white"></i>
               <h5><b>Online portofolio</b></h5>
-              <p class="my-3">Your projects will be deployed on Github platform</p><a class="btn btn-warning btn-block text-white" href="https://github.com/signup"><b class="text-dark"><b>Sign up</b></b></a>
+              <p class="my-3">Your projects will be deployed on Github platform</p><a class="btn btn-warning btn-block text-white" href="https://github.com/signup" style="	border-top-left-radius: 10px;	border-top-right-radius: 10px;	border-bottom-left-radius: 10px;	border-bottom-right-radius: 10px;"><b class="text-dark"><b>Sign up</b></b></a>
             </div>
           </div>
         </div>
@@ -273,5 +281,3 @@
 </body>
 
 </html>
-
-
